@@ -1,0 +1,86 @@
+object F_Organizer: TF_Organizer
+  Left = 0
+  Top = 0
+  Caption = 'F_Organizer'
+  ClientHeight = 441
+  ClientWidth = 838
+  Color = clNavy
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 841
+    Height = 91
+    Caption = 'Panel1'
+    Color = 8454143
+    ParentBackground = False
+    TabOrder = 0
+    object BitBtn1: TBitBtn
+      Left = 8
+      Top = 8
+      Width = 75
+      Height = 75
+      Caption = 'BitBtn1'
+      TabOrder = 0
+      OnClick = BitBtn1Click
+    end
+    object BitBtn2: TBitBtn
+      Left = 89
+      Top = 8
+      Width = 75
+      Height = 75
+      Caption = 'BitBtn1'
+      TabOrder = 1
+    end
+    object BitBtn3: TBitBtn
+      Left = 170
+      Top = 8
+      Width = 75
+      Height = 75
+      Caption = 'BitBtn1'
+      TabOrder = 2
+    end
+    object BitBtn4: TBitBtn
+      Left = 251
+      Top = 8
+      Width = 75
+      Height = 75
+      Caption = 'BitBtn1'
+      TabOrder = 3
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 97
+    Width = 822
+    Height = 336
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object Database: TSQLConnection
+    DriverName = 'Sqlite'
+    Params.Strings = (
+      'DriverUnit=Data.DbxSqlite'
+      
+        'DriverPackageLoader=TDBXSqliteDriverLoader,DBXSqliteDriver170.bp' +
+        'l'
+      
+        'MetaDataPackageLoader=TDBXSqliteMetaDataCommandFactory,DbxSqlite' +
+        'Driver170.bpl'
+      'ColumnMetaDataSupported=True'
+      'FailIfMissing=True')
+    Left = 792
+    Top = 24
+  end
+end

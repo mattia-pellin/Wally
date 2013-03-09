@@ -1,0 +1,90 @@
+unit U_Customer;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
+
+type
+  TF_Customer = class(TForm)
+    LE_Name: TLabeledEdit;
+    LE_Address: TLabeledEdit;
+    LE_Number: TLabeledEdit;
+    LE_City: TLabeledEdit;
+    LE_Province: TLabeledEdit;
+    LE_Phone: TLabeledEdit;
+    LE_Fax: TLabeledEdit;
+    LE_Tax: TLabeledEdit;
+    LE_IBAN: TLabeledEdit;
+    M_Notes: TMemo;
+    L_Notes: TLabel;
+    LE_GUID: TLabeledEdit;
+    BB_Save: TBitBtn;
+    BB_Cancel: TBitBtn;
+    LE_ZIP: TLabeledEdit;
+    procedure BindingFieldCheckValue(Sender: TObject);
+    procedure FieldCheckValue(Sender: TObject);
+    procedure FieldEditColor(Sender: TObject);
+
+    procedure FormCreate(Sender: TObject);
+    procedure BB_SaveClick(Sender: TObject);
+    procedure BB_CancelClick(Sender: TObject);
+    procedure LE_NameEnter(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  F_Customer: TF_Customer;
+
+implementation
+
+uses
+  U_Organizer;
+
+{$R *.dfm}
+
+procedure TF_Customer.BB_CancelClick(Sender: TObject);
+begin
+  F_Customer.Close;
+end;
+
+procedure TF_Customer.BB_SaveClick(Sender: TObject);
+begin
+  Database.AddCustomer(LE_Name.Text, LE_Address.Text, LE_City.Text, LE_Province.Text, LE_Phone.Text,
+                       LE_Fax.Text, 'mattia@pellin.it', LE_Tax.Text, LE_IBAN.Text, '2013/01/01',
+                       M_Notes.Text, StrToInt(LE_Number.Text), StrToInt(LE_ZIP.Text));
+end;
+
+procedure TF_Customer.FormCreate(Sender: TObject);
+begin
+  //Center application on screen
+  F_Customer.Left:= (Screen.Width - F_Customer.Width) div 2;
+  F_Customer.Top:= (Screen.Height - F_Customer.Height) div 2;
+end;
+
+procedure TF_Customer.FieldEditColor(Sender: TObject);
+begin
+  (Sender as TLabeledEdit).Color:= clWhite;
+end;
+
+procedure TF_Customer.BindingFieldCheckValue(Sender: TObject);
+begin
+  if Database.FieldValueExists('name', (Sender as TLabeledEdit).Text) then
+    (Sender as TLabeledEdit).Color:= $00AAFFFF
+  else
+    (Sender as TLabeledEdit).Color:= $00AAFFAA;
+end;
+
+procedure TF_Customer.FieldCheckValue(Sender: TObject);
+begin
+  if Database.FieldValueExists('name', (Sender as TLabeledEdit).Text) then
+    (Sender as TLabeledEdit).Color:= $00AAAAFF
+  else
+    (Sender as TLabeledEdit).Color:= $00AAFFAA;
+end;
+
+end.

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2013/02/14 16.00.00.000.928,=C:\Users\Mattia\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/02/14 16.00.00.000.380,C:\Users\Mattia\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\Mattia\Dropbox\Varie\Organizer\P_Organizer.dproj</Transaction>
+    <Transaction>2013/02/14 16.00.00.000.949,C:\Users\Mattia\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\Mattia\Dropbox\Varie\Organizer\U_Organizer.pas</Transaction>
+    <Transaction>2013/02/14 16.00.00.000.949,C:\Users\Mattia\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\Mattia\Dropbox\Varie\Organizer\U_Organizer.dfm</Transaction>
+    <Transaction>2013/03/05 16.00.00.000.015,C:\Users\Mattia\Dropbox\Varie\Organizer\U_Customer.pas=C:\Users\Mattia\Dropbox\Varie\Organizer\Unit1.pas</Transaction>
+    <Transaction>2013/03/05 16.00.00.000.015,C:\Users\Mattia\Dropbox\Varie\Organizer\U_Customer.dfm=C:\Users\Mattia\Dropbox\Varie\Organizer\Unit1.dfm</Transaction>
+    <Transaction>2013/03/05 16.00.00.000.240,=C:\Users\Mattia\Dropbox\Varie\Organizer\Unit1.pas</Transaction>
+    <Transaction>2013/03/06 18.00.00.000.164,C:\Users\Mattia\Dropbox\Varie\Organizer\U_Functions.pas=C:\Users\Mattia\Dropbox\Varie\Organizer\Unit1.pas</Transaction>
+    <Transaction>2013/03/06 18.00.00.000.901,=C:\Users\Mattia\Dropbox\Varie\Organizer\Unit1.pas</Transaction>
+    <Transaction>2013/03/07 12.00.00.000.002,C:\Users\Mattia\Dropbox\Varie\Organizer\Unit1.pas=C:\Users\Mattia\Dropbox\Varie\Organizer\U_Classes.pas</Transaction>
+    <Transaction>2013/03/07 12.00.00.000.862,=C:\Users\Mattia\Dropbox\Varie\Organizer\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
